@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant</title>
+    <!-- Corrected CSS path -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-messages" id="chat-messages"></div>
+        <div class="chat-input-container">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <!-- Contact Form Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <h2>Please provide your contact information</h2>
+            <form id="contact-form">
+                <input type="text" id="contact-name" placeholder="Your Name" required>
+                <input type="email" id="contact-email" placeholder="Your Email" required>
+                <input type="tel" id="contact-phone" placeholder="Your Phone Number" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Appointment Form Modal -->
+    <div id="appointment-modal" class="modal">
+        <div class="modal-content">
+            <h2>Book Appointment</h2>
+            <form id="appointment-form">
+                <input type="date" id="appointment-date" required>
+                <select id="appointment-time" required>
+                    <option value="">Select Time</option>
+                </select>
+                <input type="text" id="appointment-name" placeholder="Your Name" required>
+                <input type="email" id="appointment-email" placeholder="Your Email" required>
+                <input type="tel" id="appointment-phone" placeholder="Your Phone Number" required>
+                <button type="submit">Book Appointment</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Corrected JS path -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
