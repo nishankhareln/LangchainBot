@@ -22,7 +22,7 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).parent))
 
 from app.tools import AppointmentTool, ContactTool
-# Rest of your code...
+
 from app.tools.contact_tool import ContactTool
 from app.validation import (
     validate_email, validate_phone, validate_date,
